@@ -1,0 +1,4 @@
+1. ERD 모델구조
+팀명_ERD.pdf
+2. API 설계문서
+ARI_wiki주소.txt
