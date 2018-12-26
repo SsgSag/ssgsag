@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.RelativeLayout
 import com.example.dohee.ssgsag.Adapter.MyFragmentStatePagerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureBottomNavigation() {
+
         vp_main_act_view_frag_pager.adapter = MyFragmentStatePagerAdapter(supportFragmentManager, 3) //3개를 고정시키겠다.
         vp_main_act_view_frag_pager.offscreenPageLimit = 3
         vp_main_act_view_frag_pager.setCurrentItem(1,true)
