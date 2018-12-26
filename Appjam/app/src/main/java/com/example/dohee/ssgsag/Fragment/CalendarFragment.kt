@@ -48,6 +48,8 @@ class CalendarFragment : Fragment(){
             Toast.makeText(context, today, Toast.LENGTH_SHORT).show()
             Log.e("log test1", date.toString())
 
+
+            
         }
     }
 
