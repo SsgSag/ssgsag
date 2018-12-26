@@ -37,26 +37,28 @@ public class UserService {
      *
      * @return DefaultRes
      */
+    /*
     public DefaultRes getAllUsers() {
         final List<User> userList = userMapper.findAll();
         if (userList.isEmpty())
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_USER);
         return DefaultRes.res(StatusCode.OK, ResponseMessage.READ_USER, userList);
     }
-
+    */
     /**
      * 이름으로 회원 조회
      *
      * @param name 이름
      * @return DefaultRes
      */
+    /*
     public DefaultRes findByName(final String name) {
         final User user = userMapper.findByName(name);
         if (user == null)
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_USER);
         return DefaultRes.res(StatusCode.OK, ResponseMessage.READ_USER, user);
     }
-
+    */
     /**
      * 회원 가입
      *
@@ -70,7 +72,12 @@ public class UserService {
             if (signUpReq.getProfile() != null)
                 signUpReq.setProfileUrl(s3FileUploadService.upload(signUpReq.getProfile()));
 
-            userMapper.save(signUpReq);
+            int userIdx = userMapper.save(signUpReq);
+            List<Integer> userInterest = signUpReq.getUserInterest();
+            for(int i : userInterest)
+            {
+                userMapper.saveInterest(userIdx, i);
+            }
             return DefaultRes.res(StatusCode.CREATED, ResponseMessage.CREATED_USER);
         } catch (Exception e) {
             //Rollback
@@ -87,6 +94,7 @@ public class UserService {
      * @param signUpReq 수정할 회원 데이터
      * @return DefaultRes
      */
+    /*
     @Transactional
     public DefaultRes update(final int userIdx, final SignUpReq signUpReq) {
         User temp = userMapper.findByUserIdx(userIdx);
@@ -105,13 +113,14 @@ public class UserService {
             return DefaultRes.res(StatusCode.DB_ERROR, ResponseMessage.DB_ERROR);
         }
     }
-
+    */
     /**
      * 회원 탈퇴
      *
      * @param userIdx 회원 고유 번호
      * @return DefaultRes
      */
+    /*
     @Transactional
     public DefaultRes deleteByUserIdx(final int userIdx) {
         final User user = userMapper.findByUserIdx(userIdx);
@@ -128,4 +137,5 @@ public class UserService {
             return DefaultRes.res(StatusCode.DB_ERROR, ResponseMessage.DB_ERROR);
         }
     }
+    */
 }

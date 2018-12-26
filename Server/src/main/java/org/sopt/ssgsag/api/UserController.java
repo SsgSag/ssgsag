@@ -28,7 +28,7 @@ public class UserController {
         this.jwtService = jwtService;
     }
 
-
+    /*
     @GetMapping("")
     public ResponseEntity getUser(@RequestParam("name") final Optional<String> name) {
         try {
@@ -52,7 +52,7 @@ public class UserController {
         //application/json 객체 형식
         return signUpReq.toString();
     }
-
+    */
 
     /**
      * 회원 가입
@@ -87,6 +87,7 @@ public class UserController {
      * @param signUpReq 수정할 회원 정보 객체
      * @return ResponseEntity
      */
+    /*
     @Auth
     @PutMapping("/{userIdx}")
     public ResponseEntity signUp(
@@ -101,13 +102,14 @@ public class UserController {
             return new ResponseEntity<>(FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    */
     /**
      * 회원 정보 삭제 API
      * 인증 필요
      * @param userIdx 회원 고유 번호
      * @return ResponseEntity
      */
+    /*
     @Auth
     @DeleteMapping("/{userIdx}")
     public ResponseEntity deleteUser(@PathVariable(value = "userIdx") final int userIdx) {
@@ -118,4 +120,5 @@ public class UserController {
             return new ResponseEntity<>(FAIL_DEFAULT_RES, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    */
 }
