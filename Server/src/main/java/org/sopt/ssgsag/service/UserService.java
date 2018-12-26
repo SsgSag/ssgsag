@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -70,15 +71,22 @@ public class UserService {
         try {
             //파일이 있다면 파일을 S3에 저장 후 경로를 저장
             if (signUpReq.getProfile() != null)
-                signUpReq.setProfileUrl(s3FileUploadService.upload(signUpReq.getProfile()));
+                signUpReq.setUserProfileUrl(s3FileUploadService.upload(signUpReq.getProfile()));
 
             int userIdx = userMapper.save(signUpReq);
+            log.info(Integer.toString(userIdx));
             List<Integer> userInterest = signUpReq.getUserInterest();
+            log.info(signUpReq.getUserEmail());
+            log.info(signUpReq.getUserPw());
+            log.info("saveInterest 들어가기전");
+            log.info(Integer.toString(userInterest.size()));
             for(int i : userInterest)
             {
                 userMapper.saveInterest(userIdx, i);
             }
+            log.info("saveInterest 나온 후");
             return DefaultRes.res(StatusCode.CREATED, ResponseMessage.CREATED_USER);
+
         } catch (Exception e) {
             //Rollback
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();

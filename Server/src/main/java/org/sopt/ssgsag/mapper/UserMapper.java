@@ -17,11 +17,11 @@ public interface UserMapper {
     //회원 이름으로 조회
     @Select("SELECT * FROM user WHERE name = #{name}")
     User findByName(@Param("name") final String name);
-
-    //회원 고유 번호로 조회
-    @Select("SELECT * FROM user WHERE userIdx = #{userIdx}")
-    User findByUserIdx(@Param("userIdx") final int userIdx);
     */
+    //회원 고유 번호로 조회
+    @Select("SELECT * FROM User WHERE userIdx = #{userIdx}")
+    User findByUserIdx(@Param("userIdx") final int userIdx);
+
 
     //회원 등록, Auto Increment는 회원 고유 번호
     //Auto Increment 값을 받아오고 싶으면 리턴 타입을 int(Auto Increment 컬럼 타입)으로 하면 된다.
@@ -29,7 +29,7 @@ public interface UserMapper {
             "userSignInTime, userPushAllow, userInfoAllow, userProfileUrl) VALUES(#{signUpReq.userEmail}, #{signUpReq.userPw}," +
             "#{signUpReq.userName}, #{signUpReq.userUniv}, #{signUpReq.userMajor}, #{signUpReq.userStudentNum}, #{signUpReq.userGender}, " +
             "#{signUpReq.userBirth}, #{signUpReq.userSignOutTime}, #{signUpReq.userSignInTime}, #{signUpReq.userPushAllow}, " +
-            "#{signUpReq.userInfoAllow}, #{signUpReq.profileUrl})")
+            "#{signUpReq.userInfoAllow}, #{signUpReq.userProfileUrl})")
     @Options(useGeneratedKeys = true, keyColumn = "User.userIdx")
     int save(@Param("signUpReq") final SignUpReq signUpReq);
 
