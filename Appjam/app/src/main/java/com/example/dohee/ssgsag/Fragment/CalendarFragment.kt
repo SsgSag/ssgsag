@@ -49,7 +49,7 @@ class CalendarFragment : Fragment(){
             Log.e("log test1", date.toString())
 
 
-            
+
         }
     }
 
