@@ -21,19 +21,20 @@ import com.example.dohee.ssgsag.R
 import com.example.dohee.ssgsag.Spot
 import com.example.dohee.ssgsag.SpotDiffCallback
 import com.yuyakaido.android.cardstackview.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.ArrayList
 
-class HomeFragment : Fragment() {
-    private val drawerLayout by lazy { findViewById<DrawerLayout>(R.id.drawer_layout) }
-    private val cardStackView by lazy { findViewById<CardStackView>(R.id.card_stack_view) }
-    private val manager by lazy { CardStackLayoutManager(this, this) }
+class HomeFragment : Fragment(),CardStackListener {
+    private val drawerLayout by lazy { drawer_layout }
+    private val cardStackView by lazy { card_stack_view }
+    private val manager by lazy { CardStackLayoutManager(context, this) }
     private val adapter by lazy { CardStackAdapter(createSpots()) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val homeFragmentView : View = inflater!!.inflate(R.layout.fragment_home, container, false)
         return homeFragmentView
 
-        setupNavigation()
+//        setupNavigation()
         setupCardStackView()
         setupButton()
     }
@@ -74,40 +75,40 @@ class HomeFragment : Fragment() {
         val textView = view.findViewById<TextView>(R.id.item_name)
         Log.d("CardStackView", "onCardDisappeared: ($position) ${textView.text}")
     }
+//
+//    private fun setupNavigation() {
+//        // Toolbar
+//        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+//        setSupportActionBar(toolbar)
+//
+//        // DrawerLayout
+//        val actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer)
+//        actionBarDrawerToggle.syncState()
+//        drawerLayout.addDrawerListener(actionBarDrawerToggle)
 
-    private fun setupNavigation() {
-        // Toolbar
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-        // DrawerLayout
-        val actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer)
-        actionBarDrawerToggle.syncState()
-        drawerLayout.addDrawerListener(actionBarDrawerToggle)
-
-        // NavigationView
-        val navigationView = findViewById<NavigationView>(R.id.navigation_view)
-        navigationView.setNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.reload -> reload()
-                R.id.add_spot_to_first -> addFirst(1)
-                R.id.add_spot_to_last -> addLast(1)
-                R.id.remove_spot_from_first -> removeFirst(1)
-                R.id.remove_spot_from_last -> removeLast(1)
-                R.id.replace_first_spot -> replace()
-                R.id.swap_first_for_last -> swap()
-            }
-            drawerLayout.closeDrawers()
-            true
-        }
-    }
+//        // NavigationView
+//        val navigationView = findViewById<NavigationView>(R.id.navigation_view)
+//        navigationView.setNavigationItemSelectedListener { menuItem ->
+//            when (menuItem.itemId) {
+//                R.id.reload -> reload()
+//                R.id.add_spot_to_first -> addFirst(1)
+//                R.id.add_spot_to_last -> addLast(1)
+//                R.id.remove_spot_from_first -> removeFirst(1)
+//                R.id.remove_spot_from_last -> removeLast(1)
+//                R.id.replace_first_spot -> replace()
+//                R.id.swap_first_for_last -> swap()
+//            }
+//            drawerLayout.closeDrawers()
+//            true
+//        }
+//    }
 
     private fun setupCardStackView() {
         initialize()
     }
 
     private fun setupButton() {
-        val skip = findViewById<View>(R.id.skip_button)
+        val skip = skip_button
         skip.setOnClickListener {
             val setting = SwipeAnimationSetting.Builder()
                 .setDirection(Direction.Left)
@@ -118,7 +119,7 @@ class HomeFragment : Fragment() {
             cardStackView.swipe()
         }
 
-        val rewind = findViewById<View>(R.id.rewind_button)
+        val rewind = rewind_button
         rewind.setOnClickListener {
             val setting = RewindAnimationSetting.Builder()
                 .setDirection(Direction.Bottom)
@@ -129,7 +130,7 @@ class HomeFragment : Fragment() {
             cardStackView.rewind()
         }
 
-        val like = findViewById<View>(R.id.like_button)
+        val like = like_button
         like.setOnClickListener {
             val setting = SwipeAnimationSetting.Builder()
                 .setDirection(Direction.Right)
