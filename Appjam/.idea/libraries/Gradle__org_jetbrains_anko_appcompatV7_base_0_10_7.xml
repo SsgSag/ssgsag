@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:appcompatV7-base-0.10.7">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompatV7-base-0.10.7.aar/420fd7612a87960f75bb338400a9c61e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompatV7-base-0.10.7.aar/420fd7612a87960f75bb338400a9c61e/res" />
+      <root url="jar://C:/Users/Public/caches/transforms-1/files-1.1/appcompatV7-base-0.10.7.aar/72f99ae7e9670e0382738a912465bb2f/jars/classes.jar!/" />
+      <root url="file://C:/Users/Public/caches/transforms-1/files-1.1/appcompatV7-base-0.10.7.aar/72f99ae7e9670e0382738a912465bb2f/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/appcompatV7-base/0.10.7/179990bc28c57fc9b935d37b7854d5d29276bca/appcompatV7-base-0.10.7-sources.jar!/" />
+      <root url="jar://C:/Users/Public/caches/modules-2/files-2.1/org.jetbrains.anko/appcompatV7-base/0.10.7/179990bc28c57fc9b935d37b7854d5d29276bca/appcompatV7-base-0.10.7-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

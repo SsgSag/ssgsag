@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:anko-sqlite-0.10.7">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-sqlite-0.10.7.aar/fcd6685ee4285961b18a4323348f2323/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-sqlite-0.10.7.aar/fcd6685ee4285961b18a4323348f2323/jars/classes.jar!/" />
+      <root url="file://C:/Users/Public/caches/transforms-1/files-1.1/anko-sqlite-0.10.7.aar/b99cabadc06909693dcf68a82ec9ead6/res" />
+      <root url="jar://C:/Users/Public/caches/transforms-1/files-1.1/anko-sqlite-0.10.7.aar/b99cabadc06909693dcf68a82ec9ead6/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sqlite/0.10.7/6273db4447a9ada202b67fe1ed5085defe2f8494/anko-sqlite-0.10.7-sources.jar!/" />
+      <root url="jar://C:/Users/Public/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sqlite/0.10.7/6273db4447a9ada202b67fe1ed5085defe2f8494/anko-sqlite-0.10.7-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:anko-sdk27-0.10.7">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-sdk27-0.10.7.aar/8c355d4a31c33a9de9e25f9dec6e1cc2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-sdk27-0.10.7.aar/8c355d4a31c33a9de9e25f9dec6e1cc2/jars/classes.jar!/" />
+      <root url="jar://C:/Users/Public/caches/transforms-1/files-1.1/anko-sdk27-0.10.7.aar/818e312efb5299d4c4d51f1746327c79/jars/classes.jar!/" />
+      <root url="file://C:/Users/Public/caches/transforms-1/files-1.1/anko-sdk27-0.10.7.aar/818e312efb5299d4c4d51f1746327c79/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk27/0.10.7/41bebf2a06ace7a1ab5d6401f24562635f0853a1/anko-sdk27-0.10.7-sources.jar!/" />
+      <root url="jar://C:/Users/Public/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk27/0.10.7/41bebf2a06ace7a1ab5d6401f24562635f0853a1/anko-sdk27-0.10.7-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

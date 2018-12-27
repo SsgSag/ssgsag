@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:anko-support-v4-commons-0.10.7">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-support-v4-commons-0.10.7.aar/e9530b675d04c93cbecfa4d078c891e8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-support-v4-commons-0.10.7.aar/e9530b675d04c93cbecfa4d078c891e8/res" />
+      <root url="file://C:/Users/Public/caches/transforms-1/files-1.1/anko-support-v4-commons-0.10.7.aar/ebd0e35b09af91b15a32489733ea5c7e/res" />
+      <root url="jar://C:/Users/Public/caches/transforms-1/files-1.1/anko-support-v4-commons-0.10.7.aar/ebd0e35b09af91b15a32489733ea5c7e/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4-commons/0.10.7/74820b045129b0abf9bdc220476169038ca2c046/anko-support-v4-commons-0.10.7-sources.jar!/" />
+      <root url="jar://C:/Users/Public/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4-commons/0.10.7/74820b045129b0abf9bdc220476169038ca2c046/anko-support-v4-commons-0.10.7-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

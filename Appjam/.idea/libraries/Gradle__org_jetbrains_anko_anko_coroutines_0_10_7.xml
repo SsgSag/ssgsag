@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:anko-coroutines-0.10.7">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-coroutines-0.10.7.aar/708c52ae5b8213b2de22e59b42535074/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/anko-coroutines-0.10.7.aar/708c52ae5b8213b2de22e59b42535074/jars/classes.jar!/" />
+      <root url="jar://C:/Users/Public/caches/transforms-1/files-1.1/anko-coroutines-0.10.7.aar/e03cb40cbfc71ef4fffc31bc4fe09ff1/jars/classes.jar!/" />
+      <root url="file://C:/Users/Public/caches/transforms-1/files-1.1/anko-coroutines-0.10.7.aar/e03cb40cbfc71ef4fffc31bc4fe09ff1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-coroutines/0.10.7/fb667cdd9a23a6288dfac269c4f857877b6313d3/anko-coroutines-0.10.7-sources.jar!/" />
+      <root url="jar://C:/Users/Public/caches/modules-2/files-2.1/org.jetbrains.anko/anko-coroutines/0.10.7/fb667cdd9a23a6288dfac269c4f857877b6313d3/anko-coroutines-0.10.7-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
