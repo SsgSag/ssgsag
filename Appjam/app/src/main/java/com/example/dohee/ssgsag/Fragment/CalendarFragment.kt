@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.dohee.ssgsag.R
 import com.prolificinteractive.materialcalendarview.CalendarDay
+import com.prolificinteractive.materialcalendarview.format.TitleFormatter
 import kotlinx.android.synthetic.main.fragment_calendar.*
 import kotlinx.android.synthetic.main.fragment_calendar.view.*
 import java.util.*
@@ -18,7 +19,9 @@ class CalendarFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val calendarFragment: View = inflater!!.inflate(R.layout.fragment_calendar, container, false)
+        calendarFragment.frag_calendar_view.setTitleFormatter {
 
+        }
         setOnClickListener(calendarFragment)
         return calendarFragment
 
