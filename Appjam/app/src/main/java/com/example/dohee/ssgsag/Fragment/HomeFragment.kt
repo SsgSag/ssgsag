@@ -32,20 +32,22 @@ class HomeFragment : Fragment(),CardStackListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val homeFragmentView : View = inflater!!.inflate(R.layout.fragment_home, container, false)
-        return homeFragmentView
 
 //        setupNavigation()
         setupCardStackView()
         setupButton()
+
+        return homeFragmentView
+
     }
 
-    override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(Gravity.START)) {
-            drawerLayout.closeDrawers()
-        } else {
-            super.onBackPressed()
-        }
-    }
+//    override fun onBackPressed() {
+//        if (drawerLayout.isDrawerOpen(Gravity.START)) {
+//            drawerLayout.closeDrawers()
+//        } else {
+//            super.onBackPressed()
+//        }
+//    }
 
     override fun onCardDragging(direction: Direction, ratio: Float) {
         Log.d("CardStackView", "onCardDragging: d = ${direction.name}, r = $ratio")
