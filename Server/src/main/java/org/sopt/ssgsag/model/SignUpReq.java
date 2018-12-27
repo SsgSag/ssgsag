@@ -19,6 +19,7 @@ public class SignUpReq {
     private String userSignOutTime; //ex)2018-12-26 20:35 처음에 가입날짜랑 같음
     private String userSignInTime; //ex)2018-12-26 20:35
     private int userPushAllow;
+    private int userIsSeeker;//빠진 것 같아서 추가했어요 -수진-
     private int userInfoAllow;
     private List<Integer> userInterest;// = new ArrayList<>();
 
