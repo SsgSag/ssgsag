@@ -17,7 +17,7 @@ Content-Type: application/json
 ~~~
 {
     "userEmail": "her0807@naver.com",
-    "userPass": "1234"
+    "userPw": "1234"
 }
 ~~~
 

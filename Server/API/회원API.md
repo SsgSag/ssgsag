@@ -19,26 +19,24 @@ Content-Type: application/json
 회원 조회(self 조회)
 
 ```
-4{
+{
     "status": 200,
     "message": "회원 정보 조회 성공",
     "data": {
-    "userIdx" : "1",
-    "userEmail" : "2",
-    "userPass" : "1234",
-    "userName" : "테스트",
-    "userUniv" : "00대학교",
-    "userMajor" :"00전공",
-    "userStudentNum" :"201732038",
-    "userGender" :"Man",
-    "userBirth" :"980807",
-    "userInterest" : ["2", "4"], // 관심분야 인덱스
-    "usersignOutTime" :"2018-12-27 20:35",
-    "userSignTime" : "2018-12-23 20:35",
-    "userBirth" :"980807",
-    "userInterest" :"1$2$",
-    "userPushAllow" : "0",
-    "userSeeker" : "0"
+            "userIdx" : "1",
+            "userEmail" : "2",
+            "userPw" : "1234",
+            "userName" : "테스트",
+            "userUniv" : "00대학교",
+            "userMajor" :"00전공",
+            "userStudentNum" :"201732038",
+            "userGender" :"Man",
+            "userBirth" :"980807",
+            "categoryIdx" : ["2", "4"], // 관심분야 인덱스
+            "userSignOutTime" :"2018-12-27 20:35",
+            "userSignInTime" : "2018-12-23 20:35",
+            "userInfoAllow" : "0",
+            "userIsSeeker" : "0"
     }
 }
 
@@ -51,25 +49,21 @@ Content-Type: application/json
     "status": 200,
     "message": "회원 정보 조회 성공",
     "data": {
-            "status": 200,
-            "message": "회원 정보 조회 성공",
-            "data": {
             "userIdx" : "1",
             "userEmail" : "2",
-            "userPass" : "1234",
+            "userPw" : "1234",
             "userName" : "테스트",
             "userUniv" : "00대학교",
             "userMajor" :"00전공",
             "userStudentNum" :"201732038",
             "userGender" :"Man",
             "userBirth" :"980807",
-            "userInterest" : ["2", "4"], // 관심분야 인덱스
-            "usersignOutTime" :"2018-12-27 20:35",
-            "userSignTime" : "2018-12-23 20:35",
-            "userBirth" :"980807",
-            "userInterest" :"1$2$",
-            "userPushAllow" : "0",
-            "userSeeker" : "0"
+            "categoryIdx" : ["2", "4"], // 관심분야 인덱스
+            "userSignOutTime" :"2018-12-27 20:35",
+            "userSignInTime" : "2018-12-23 20:35",
+            "userIsSeeker" : "0",
+            "userInfoAllow" : "0"
+
     }
 }
 ```
@@ -120,19 +114,19 @@ Content-Type: application/json
 
 ```
 {
+
     "userEmail" : "2",
-    "userPass" : "1234",
+    "userPw" : "1234",
     "userName" : "테스트",
     "userUniv" : "00대학교",
     "userMajor" :"00전공",
     "userStudentNum" :"201732038",
     "userGender" :"Man",
     "userBirth" :"980807",
-    "usersignOutTime" :"2018-12-27 20:35",
-    "userBirth" :"980807",
-    "userInterest" : ["2", "4"], // 관심분야 인덱스
-    "userPushAllow" : "0",
-    "userSeeker" : "0"
+    "categoryIdx" : ["2", "4"], // 관심분야 인덱스
+    "userIsSeeker" : "0",
+    "userInfoAllow" : "0"
+
     
 }
 ```
@@ -225,18 +219,16 @@ Application: token
     "message": "회원 정보 수정 성공",
     "data": {
             "userEmail" : "2",
-            "userPass" : "1234",
-            "userName" : "수달",
+            "userPw" : "1234",
+            "userName" : "테스트",
             "userUniv" : "00대학교",
             "userMajor" :"00전공",
             "userStudentNum" :"201732038",
             "userGender" :"Man",
             "userBirth" :"980807",
-            "usersignOutTime" :"2018-12-27 20:35",
-            "userBirth" :"980807",
-            "userInterest" : ["2", "4"], // 관심분야 인덱스
-            "userPushAllow" : "0",
-            "userSeeker" : "0"
+            "categoryIdx" : ["2", "4"], // 관심분야 인덱스
+            "userIsSeeker" : "0",
+            "userInfoAllow" : "0"
     }
     
     

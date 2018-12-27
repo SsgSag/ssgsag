@@ -23,7 +23,7 @@ Application: token
 ```
 {
 	"userIdx" : "2",
-	"interestIdx" : ["1", "3", "5"]
+	"categoryIdx" : ["1", "3", "5"]
 }
 ```
 
@@ -39,7 +39,7 @@ Application: token
     "message": "관심분야 수정 성공",
     "data": {
         "userIdx" : "2",
-        "interestIdx" : ["1", "3", "5"]
+        "categoryIdx" : ["1", "3", "5"]
     }
 }
 ```
