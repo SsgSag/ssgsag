@@ -23,20 +23,22 @@ Content-Type: application/json
     "status": 200,
     "message": "회원 정보 조회 성공",
     "data": {
-            "userIdx" : "1",
-            "userEmail" : "2",
-            "userPw" : "1234",
-            "userName" : "테스트",
-            "userUniv" : "00대학교",
-            "userMajor" :"00전공",
-            "userStudentNum" :"201732038",
-            "userGender" :"Man",
-            "userBirth" :"980807",
-            "categoryIdx" : ["2", "4"], // 관심분야 인덱스
-            "userSignOutTime" :"2018-12-27 20:35",
-            "userSignInTime" : "2018-12-23 20:35",
-            "userInfoAllow" : "0",
-            "userIsSeeker" : "0"
+    	  "userIdx" : "1",	
+          "userEmail" : "2",
+          "userPw" : "1234",
+          "userName" : "테스트",
+          "userUniv" : "00대학교",
+          "userMajor" :"00전공",
+          "userStudentNum" :"201732038",
+          "userGender" :"Man",
+          "userBirth" :"980807",
+          "userSignOutTime" :"2018-12-27 20:35",
+          "userSignInTime" : "2018-12-23 20:35",
+          "userPushAllow" : "0",
+          "userIsSeeker" : "0",
+          "userInfoAllow" : "0",
+          "userInterest" : ["2", "4"], // 관심분야 인덱스
+          "userProfileUrl" : https://s3.ap-northeast-2.amazonaws.com/project-hs/124f34702c074885a4fb3b84389a2680.jpg
     }
 }
 
@@ -49,20 +51,22 @@ Content-Type: application/json
     "status": 200,
     "message": "회원 정보 조회 성공",
     "data": {
-            "userIdx" : "1",
-            "userEmail" : "2",
-            "userPw" : "1234",
-            "userName" : "테스트",
-            "userUniv" : "00대학교",
-            "userMajor" :"00전공",
-            "userStudentNum" :"201732038",
-            "userGender" :"Man",
-            "userBirth" :"980807",
-            "categoryIdx" : ["2", "4"], // 관심분야 인덱스
-            "userSignOutTime" :"2018-12-27 20:35",
-            "userSignInTime" : "2018-12-23 20:35",
-            "userIsSeeker" : "0",
-            "userInfoAllow" : "0"
+    	  "userIdx" : "1",	
+          "userEmail" : "2",
+          "userPw" : "1234",
+          "userName" : "테스트",
+          "userUniv" : "00대학교",
+          "userMajor" :"00전공",
+          "userStudentNum" :"201732038",
+          "userGender" :"Man",
+          "userBirth" :"980807",
+          "userSignOutTime" :"2018-12-27 20:35",
+          "userSignInTime" : "2018-12-23 20:35",
+          "userPushAllow" : "0",
+          "userIsSeeker" : "0",
+          "userInfoAllow" : "0",
+          "userInterest" : ["2", "4"], // 관심분야 인덱스
+          "userProfileUrl" : https://s3.ap-northeast-2.amazonaws.com/project-hs/124f34702c074885a4fb3b84389a2680.jpg
 
     }
 }
@@ -115,17 +119,19 @@ Content-Type: application/json
 ```
 {
 
-    "userEmail" : "2",
-    "userPw" : "1234",
-    "userName" : "테스트",
-    "userUniv" : "00대학교",
-    "userMajor" :"00전공",
-    "userStudentNum" :"201732038",
-    "userGender" :"Man",
-    "userBirth" :"980807",
-    "categoryIdx" : ["2", "4"], // 관심분야 인덱스
-    "userIsSeeker" : "0",
-    "userInfoAllow" : "0"
+          "userEmail" : "2",
+          "userPw" : "1234",
+          "userName" : "테스트",
+          "userUniv" : "00대학교",
+          "userMajor" :"00전공",
+          "userStudentNum" :"201732038",
+          "userGender" :"Man",
+          "userBirth" :"980807",
+          "userPushAllow" : "0",
+          "userIsSeeker" : "0",
+          "userInfoAllow" : "0",
+          "userInterest" : ["2", "4"], // 관심분야 인덱스
+          "userProfileUrl" : https://s3.ap-northeast-2.amazonaws.com/project-hs/124f34702c074885a4fb3b84389a2680.jpg
 
     
 }
@@ -218,6 +224,7 @@ Application: token
     "status": 200,
     "message": "회원 정보 수정 성공",
     "data": {
+    
             "userEmail" : "2",
             "userPw" : "1234",
             "userName" : "테스트",
@@ -226,9 +233,11 @@ Application: token
             "userStudentNum" :"201732038",
             "userGender" :"Man",
             "userBirth" :"980807",
-            "categoryIdx" : ["2", "4"], // 관심분야 인덱스
+            "userPushAllow" : "0",
             "userIsSeeker" : "0",
-            "userInfoAllow" : "0"
+            "userInfoAllow" : "0",
+            "userInterest" : ["2", "4"], // 관심분야 인덱스
+            "userProfileUrl" : https://s3.ap-northeast-2.amazonaws.com/project-hs/124f34702c074885a4fb3b84389a2680.jpg
     }
     
     
