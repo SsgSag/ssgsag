@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -37,26 +38,28 @@ public class UserService {
      *
      * @return DefaultRes
      */
+    /*
     public DefaultRes getAllUsers() {
         final List<User> userList = userMapper.findAll();
         if (userList.isEmpty())
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_USER);
         return DefaultRes.res(StatusCode.OK, ResponseMessage.READ_USER, userList);
     }
-
+    */
     /**
      * 이름으로 회원 조회
      *
      * @param name 이름
      * @return DefaultRes
      */
+    /*
     public DefaultRes findByName(final String name) {
         final User user = userMapper.findByName(name);
         if (user == null)
             return DefaultRes.res(StatusCode.NOT_FOUND, ResponseMessage.NOT_FOUND_USER);
         return DefaultRes.res(StatusCode.OK, ResponseMessage.READ_USER, user);
     }
-
+    */
     /**
      * 회원 가입
      *
@@ -68,10 +71,22 @@ public class UserService {
         try {
             //파일이 있다면 파일을 S3에 저장 후 경로를 저장
             if (signUpReq.getProfile() != null)
-                signUpReq.setProfileUrl(s3FileUploadService.upload(signUpReq.getProfile()));
+                signUpReq.setUserProfileUrl(s3FileUploadService.upload(signUpReq.getProfile()));
 
-            userMapper.save(signUpReq);
+            int userIdx = userMapper.save(signUpReq);
+            log.info(Integer.toString(userIdx));
+            List<Integer> userInterest = signUpReq.getUserInterest();
+            log.info(signUpReq.getUserEmail());
+            log.info(signUpReq.getUserPw());
+            log.info("saveInterest 들어가기전");
+            log.info(Integer.toString(userInterest.size()));
+            for(int i : userInterest)
+            {
+                userMapper.saveInterest(userIdx, i);
+            }
+            log.info("saveInterest 나온 후");
             return DefaultRes.res(StatusCode.CREATED, ResponseMessage.CREATED_USER);
+
         } catch (Exception e) {
             //Rollback
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
@@ -87,6 +102,7 @@ public class UserService {
      * @param signUpReq 수정할 회원 데이터
      * @return DefaultRes
      */
+    /*
     @Transactional
     public DefaultRes update(final int userIdx, final SignUpReq signUpReq) {
         User temp = userMapper.findByUserIdx(userIdx);
@@ -105,13 +121,14 @@ public class UserService {
             return DefaultRes.res(StatusCode.DB_ERROR, ResponseMessage.DB_ERROR);
         }
     }
-
+    */
     /**
      * 회원 탈퇴
      *
      * @param userIdx 회원 고유 번호
      * @return DefaultRes
      */
+    /*
     @Transactional
     public DefaultRes deleteByUserIdx(final int userIdx) {
         final User user = userMapper.findByUserIdx(userIdx);
@@ -128,4 +145,5 @@ public class UserService {
             return DefaultRes.res(StatusCode.DB_ERROR, ResponseMessage.DB_ERROR);
         }
     }
+    */
 }
