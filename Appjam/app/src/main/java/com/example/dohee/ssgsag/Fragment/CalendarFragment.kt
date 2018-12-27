@@ -10,17 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.applandeo.materialcalendarview.EventDay
-import com.example.dohee.ssgsag.Adapter.TodoListRecyclerViewAdapter
-import com.example.dohee.ssgsag.Decorator.DotDecorator
-import com.example.dohee.ssgsag.Decorator.EventDecorator
-import com.example.dohee.ssgsag.Decorator.OneDayDecorator
-import com.example.dohee.ssgsag.Decorator.SundayDecorator
-import com.example.dohee.ssgsag.R
-import com.example.dohee.ssgsag.data.TodoListData
-import com.prolificinteractive.materialcalendarview.CalendarDay
-import kotlinx.android.synthetic.main.fragment_calendar.*
-import kotlinx.android.synthetic.main.fragment_calendar.view.*
-import java.util.ArrayList
+
+
 
 
 class CalendarFragment : Fragment(){
@@ -40,6 +31,7 @@ class CalendarFragment : Fragment(){
 
         setOnClickListener(calendarFragment)
         return calendarFragment
+
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -55,6 +47,7 @@ class CalendarFragment : Fragment(){
         todoListRecyclerViewAdapter = TodoListRecyclerViewAdapter(activity!!,dataList)
         rv_frag_calendar_todo_list.adapter = todoListRecyclerViewAdapter
         rv_frag_calendar_todo_list.layoutManager = LinearLayoutManager(activity)
+
     }
 
 
