@@ -9,9 +9,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.applandeo.materialcalendarview.CalendarView
 import com.applandeo.materialcalendarview.EventDay
-
-
+import com.example.dohee.ssgsag.Adapter.TodoListRecyclerViewAdapter
+import com.example.dohee.ssgsag.Decorator.DotDecorator
+import com.example.dohee.ssgsag.Decorator.OneDayDecorator
+import com.example.dohee.ssgsag.Decorator.SundayDecorator
+import com.example.dohee.ssgsag.R
+import com.example.dohee.ssgsag.ScheduleRegisterActivity
+import com.example.dohee.ssgsag.data.TodoListData
+import kotlinx.android.synthetic.main.fragment_calendar.*
+import kotlinx.android.synthetic.main.fragment_calendar.view.*
+import org.jetbrains.anko.support.v4.startActivity
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class CalendarFragment : Fragment(){
@@ -21,8 +32,12 @@ class CalendarFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val calendarFragment: View = inflater!!.inflate(R.layout.fragment_calendar, container, false)
 
+        var events:ArrayList<EventDay> = ArrayList()
+        val calendar1 : Calendar = Calendar.getInstance()
+        calendar1.add(Calendar.DAY_OF_MONTH,1);
+        events.add(EventDay(calendar1,R.mipmap.ic_launcher_app))
 
-
+       // var calendarImage:CalendarView = calendarFragment.
         var sundayDecorator = SundayDecorator()
         var onedayDecorator = OneDayDecorator()
         calendarFragment.frag_calendar_view.addDecorators(sundayDecorator, onedayDecorator)
@@ -83,6 +98,11 @@ class CalendarFragment : Fragment(){
 
 
 
+        }
+
+        calendarFragment.frag_calendar_iv_register.setOnClickListener {
+
+            startActivity<ScheduleRegisterActivity>()
         }
     }
 
