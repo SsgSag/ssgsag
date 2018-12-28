@@ -20,6 +20,6 @@ class MyFragmentStatePagerAdapter(fm: FragmentManager, val fCount: Int) : Fragme
             else -> return null
         }
     }
-    
+
     override fun getCount(): Int = fCount //return fCount
 }
