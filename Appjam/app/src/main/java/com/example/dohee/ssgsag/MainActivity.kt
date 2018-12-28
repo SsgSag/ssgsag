@@ -1,5 +1,6 @@
 package com.example.dohee.ssgsag
 
+import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.widget.DrawerLayout
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun configureBottomNavigation() {
+
         vp_main_act_view_frag_pager.adapter = MyFragmentStatePagerAdapter(supportFragmentManager, 3) //3개를 고정시키겠다.
         vp_main_act_view_frag_pager.offscreenPageLimit = 3
         vp_main_act_view_frag_pager.setCurrentItem(1, true)

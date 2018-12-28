@@ -3,9 +3,7 @@ package com.example.dohee.ssgsag.Fragment
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.DefaultItemAnimator
+
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -318,6 +316,4 @@ class HomeFragment : Fragment(), CardStackListener {
         )
         return spots
     }
-
-
 }
