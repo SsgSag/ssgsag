@@ -10,6 +10,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import com.example.dohee.ssgsag.MainActivity
 import com.example.dohee.ssgsag.R
+import com.example.dohee.ssgsag.ScheduleRegisterActivity
 import com.example.dohee.ssgsag.data.TodoListData
 import kotlinx.android.synthetic.main.rv_item_todo_list.view.*
 import org.jetbrains.anko.startActivity
@@ -29,7 +30,7 @@ class TodoListRecyclerViewAdapter(val ctx: Context, val dataList: ArrayList<Todo
         holder.dday.text = dataList[position].date
         holder.item_btn.setOnClickListener {
             ctx.toast("메인엑티비티로")
-            ctx.startActivity<MainActivity>()
+            ctx.startActivity<ScheduleRegisterActivity>()
         }
     }
 

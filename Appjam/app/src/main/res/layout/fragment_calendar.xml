@@ -10,20 +10,21 @@
             android:orientation="vertical"
             android:weightSum="10">
 
-        <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/frag_calendar_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="56dp"
-            android:layout_weight="6"
-            app:mcv_selectionColor="#a9dbf0cb"
-            app:mcv_showOtherDates="all"
-            app:mcv_tileHeight="match_parent"
-            app:mcv_tileWidth="match_parent"
-            />
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/frag_calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="56dp"
+                android:layout_weight="6"
+                app:mcv_selectionColor="#a9dbf0cb"
+                app:mcv_showOtherDates="all"
+                app:mcv_tileHeight="match_parent"
+                app:mcv_tileWidth="match_parent"
+        />
         <TextView
                 android:id="@+id/frag_calendar_tv_title"
                 android:layout_width="match_parent"
@@ -38,6 +39,18 @@
 
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
-
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp">
+        <ImageView
+                android:id="@+id/frag_calendar_iv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_circle_black_24dp"/>
+    </RelativeLayout>
 
 </RelativeLayout>
