@@ -1,7 +1,9 @@
 package com.example.dohee.ssgsag.Fragment
 
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
+import android.support.v4.widget.DrawerLayout
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.DefaultItemAnimator
 import android.util.Log
@@ -10,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
+import android.widget.Button
 import android.widget.TextView
 import com.example.dohee.ssgsag.CardStackAdapter
 import com.example.dohee.ssgsag.R
@@ -17,17 +20,21 @@ import com.example.dohee.ssgsag.Spot
 import com.example.dohee.ssgsag.SpotDiffCallback
 import com.yuyakaido.android.cardstackview.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.jetbrains.anko.find
 import java.util.ArrayList
 
-class HomeFragment : Fragment(),CardStackListener {
+class HomeFragment : Fragment(), CardStackListener {
     private val drawerLayout by lazy { drawer_layout }
-    private val cardStackView by lazy { card_stack_view }
+    private var cardStackView: CardStackView? =null
     private val manager by lazy { CardStackLayoutManager(context, this) }
     private val adapter by lazy { CardStackAdapter(createSpots()) }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val homeFragmentView : View = inflater!!.inflate(R.layout.fragment_home, container, false)
+    //    private var manager: CardStackLayoutManager? = null
+//    private val adapter:CardStackAdapter = CardStackAdapter(createSpots())
+    private var homeFragmentView: View? = null
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        homeFragmentView = inflater!!.inflate(R.layout.fragment_home, container, false)
 //        setupNavigation()
         setupCardStackView()
         setupButton()
@@ -101,11 +108,14 @@ class HomeFragment : Fragment(),CardStackListener {
 //    }
 
     private fun setupCardStackView() {
+        cardStackView=homeFragmentView!!.find(R.id.card_stack_view)
+//        manager=CardStackLayoutManager(context, this)
+//        adapter=CardStackAdapter(createSpots())
         initialize()
     }
 
     private fun setupButton() {
-        val skip = skip_button
+        val skip: FloatingActionButton = homeFragmentView!!.find(R.id.skip_button)
         skip.setOnClickListener {
             val setting = SwipeAnimationSetting.Builder()
                 .setDirection(Direction.Left)
@@ -113,21 +123,10 @@ class HomeFragment : Fragment(),CardStackListener {
                 .setInterpolator(AccelerateInterpolator())
                 .build()
             manager.setSwipeAnimationSetting(setting)
-            cardStackView.swipe()
+            cardStackView?.swipe()
         }
 
-        val rewind = rewind_button
-        rewind.setOnClickListener {
-            val setting = RewindAnimationSetting.Builder()
-                .setDirection(Direction.Bottom)
-                .setDuration(200)
-                .setInterpolator(DecelerateInterpolator())
-                .build()
-            manager.setRewindAnimationSetting(setting)
-            cardStackView.rewind()
-        }
-
-        val like = like_button
+        val like: FloatingActionButton = homeFragmentView!!.find(R.id.like_button)
         like.setOnClickListener {
             val setting = SwipeAnimationSetting.Builder()
                 .setDirection(Direction.Right)
@@ -135,7 +134,7 @@ class HomeFragment : Fragment(),CardStackListener {
                 .setInterpolator(AccelerateInterpolator())
                 .build()
             manager.setSwipeAnimationSetting(setting)
-            cardStackView.swipe()
+            cardStackView?.swipe()
         }
     }
 
@@ -149,13 +148,15 @@ class HomeFragment : Fragment(),CardStackListener {
         manager.setDirections(Direction.HORIZONTAL)
         manager.setCanScrollHorizontal(true)
         manager.setCanScrollVertical(true)
-        cardStackView.layoutManager = manager
-        cardStackView.adapter = adapter
-        cardStackView.itemAnimator.apply {
+
+        cardStackView!!.layoutManager = manager
+        cardStackView!!.adapter = adapter
+        cardStackView!!.itemAnimator.apply {
             if (this is DefaultItemAnimator) {
                 supportsChangeAnimations = false
             }
         }
+
     }
 
     private fun paginate() {
@@ -274,16 +275,47 @@ class HomeFragment : Fragment(),CardStackListener {
 
     private fun createSpots(): List<Spot> {
         val spots = ArrayList<Spot>()
+        Log.e("imageeeee","eeeeeeeeeeeee")
         spots.add(Spot(name = "Yasaka Shrine", city = "Kyoto", url = "https://source.unsplash.com/Xq1ntWruZQI/600x800"))
-        spots.add(Spot(name = "Fushimi Inari Shrine", city = "Kyoto", url = "https://source.unsplash.com/NYyCqdBOKwc/600x800"))
+        spots.add(
+            Spot(
+                name = "Fushimi Inari Shrine",
+                city = "Kyoto",
+                url = "https://source.unsplash.com/NYyCqdBOKwc/600x800"
+            )
+        )
         spots.add(Spot(name = "Bamboo Forest", city = "Kyoto", url = "https://source.unsplash.com/buF62ewDLcQ/600x800"))
-        spots.add(Spot(name = "Brooklyn Bridge", city = "New York", url = "https://source.unsplash.com/THozNzxEP3g/600x800"))
-        spots.add(Spot(name = "Empire State Building", city = "New York", url = "https://source.unsplash.com/USrZRcRS2Lw/600x800"))
-        spots.add(Spot(name = "The statue of Liberty", city = "New York", url = "https://source.unsplash.com/PeFk7fzxTdk/600x800"))
+        spots.add(
+            Spot(
+                name = "Brooklyn Bridge",
+                city = "New York",
+                url = "https://source.unsplash.com/THozNzxEP3g/600x800"
+            )
+        )
+        spots.add(
+            Spot(
+                name = "Empire State Building",
+                city = "New York",
+                url = "https://source.unsplash.com/USrZRcRS2Lw/600x800"
+            )
+        )
+        spots.add(
+            Spot(
+                name = "The statue of Liberty",
+                city = "New York",
+                url = "https://source.unsplash.com/PeFk7fzxTdk/600x800"
+            )
+        )
         spots.add(Spot(name = "Louvre Museum", city = "Paris", url = "https://source.unsplash.com/LrMWHKqilUw/600x800"))
         spots.add(Spot(name = "Eiffel Tower", city = "Paris", url = "https://source.unsplash.com/HN-5Z6AmxrM/600x800"))
         spots.add(Spot(name = "Big Ben", city = "London", url = "https://source.unsplash.com/CdVAUADdqEc/600x800"))
-        spots.add(Spot(name = "Great Wall of China", city = "China", url = "https://source.unsplash.com/AWh9C-QjhE4/600x800"))
+        spots.add(
+            Spot(
+                name = "Great Wall of China",
+                city = "China",
+                url = "https://source.unsplash.com/AWh9C-QjhE4/600x800"
+            )
+        )
         return spots
     }
 
