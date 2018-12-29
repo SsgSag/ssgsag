@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         configureBottomNavigation()
     }
 
-
+//github test
     private fun configureBottomNavigation() {
 
         vp_main_act_view_frag_pager.adapter = MyFragmentStatePagerAdapter(supportFragmentManager, 3) //3개를 고정시키겠다.
