@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_sign_up1.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.startActivity
 import android.view.WindowManager
+import com.example.dohee.ssgsag.LoginActivity
 
 class SignUp1 : AppCompatActivity() {
 
@@ -16,11 +17,21 @@ class SignUp1 : AppCompatActivity() {
     private var pw: String = ""
     private var pw_check: String = ""
 
+    override fun onBackPressed() {
+        startActivity<LoginActivity>()
+        finish()
+        super.onBackPressed()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up1)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
+        iv_back_1.onClick {
+            startActivity<LoginActivity>()
+            finish()
+        }
 
         et_id.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
