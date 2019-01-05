@@ -86,11 +86,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                     <ImageView
+                            android:clickable="true"
                             android:id="@+id/btn_design"
                             android:layout_marginTop="8dp"
                             android:src="@drawable/bt_preference_design_unactive"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content" />
 
                     <ImageView
                             android:clickable="true"
@@ -99,6 +100,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
+
                             android:src="@drawable/bt_preference_marketing_unactive" />
                 </LinearLayout>
 
