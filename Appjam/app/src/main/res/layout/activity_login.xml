@@ -57,7 +57,7 @@
             android:layout_marginTop="62dp"
             android:hint="아이디"
             android:maxLines="1"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:textColorHint="#b3ffffff"
             android:letterSpacing="-0.02"
             android:textSize="18sp"
@@ -78,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:inputType="textPassword"/>
+            android:inputType="text"/>
 
         <RelativeLayout
             android:clickable="true"
