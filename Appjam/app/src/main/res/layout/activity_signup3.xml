@@ -60,7 +60,7 @@
                 <EditText
                         android:id="@+id/et_school"
                         android:hint="학교 선택"
-                        android:maxLines="1"
+                        android:singleLine="true"
                         android:letterSpacing="-0.02"
                         android:textColor="#000"
                         android:textStyle="normal"
@@ -73,7 +73,7 @@
                 <EditText
                         android:id="@+id/et_major"
                         android:hint="학과 선택"
-                        android:maxLines="1"
+                        android:singleLine="true"
                         android:letterSpacing="-0.02"
                         android:textColor="#000"
                         android:textStyle="normal"
@@ -86,7 +86,7 @@
                 <EditText
                         android:id="@+id/et_grade"
                         android:hint="학년"
-                        android:maxLines="1"
+                        android:singleLine="true"
                         android:letterSpacing="-0.02"
                         android:textColor="#000"
                         android:textStyle="normal"
@@ -99,7 +99,7 @@
                 <EditText
                         android:id="@+id/et_sid"
                         android:hint="학번"
-                        android:maxLines="1"
+                        android:singleLine="true"
                         android:letterSpacing="-0.02"
                         android:textColor="#000"
                         android:textStyle="normal"

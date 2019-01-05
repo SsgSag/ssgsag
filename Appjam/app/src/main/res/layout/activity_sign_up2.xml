@@ -54,10 +54,15 @@
                         android:layout_marginBottom="42dp"
                         android:layout_width="128dp"
                         android:layout_height="128dp">
-                    <ImageView
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_profile"
+                            android:scaleType="centerCrop"
                             android:src="@drawable/img_default_profile"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"/>
 
                     <ImageView
                             android:id="@+id/btn_camera"
@@ -75,7 +80,7 @@
                         android:layout_height="wrap_content">
                     <EditText
                             android:inputType="text"
-                            android:maxLines="1"
+                            android:singleLine="true"
                             android:id="@+id/et_name"
                             android:hint="이름"
                             android:letterSpacing="-0.02"
@@ -90,7 +95,7 @@
                     <EditText
                             android:inputType="number"
                             android:maxLength="6"
-                            android:maxLines="1"
+                            android:singleLine="true"
                             android:id="@+id/et_birth"
                             android:hint="생년월일(YYMMDD)"
                             android:letterSpacing="-0.02"
@@ -104,7 +109,7 @@
 
                     <EditText
                             android:inputType="textEmailAddress"
-                            android:maxLines="1"
+                            android:singleLine="true"
                             android:id="@+id/et_email"
                             android:hint="이메일"
                             android:letterSpacing="-0.02"

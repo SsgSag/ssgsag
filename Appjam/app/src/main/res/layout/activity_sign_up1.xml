@@ -63,7 +63,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                     <EditText
-                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:imeOptions="actionDone"
                             android:id="@+id/et_id"
                             android:hint="아이디"
                             android:letterSpacing="-0.02"
@@ -76,7 +77,8 @@
                             android:layout_height="wrap_content"/>
 
                     <EditText
-                            android:maxLines="1"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
                             android:id="@+id/et_pw"
                             android:hint="비밀번호"
                             android:letterSpacing="-0.02"
@@ -89,8 +91,8 @@
                             android:layout_height="wrap_content"/>
 
                     <EditText
-                            android:inputType="textEmailAddress"
-                            android:maxLines="1"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
                             android:id="@+id/et_pw_check"
                             android:hint="비밀번호 확인"
                             android:letterSpacing="-0.02"

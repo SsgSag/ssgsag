@@ -1,9 +1,7 @@
 package com.example.dohee.ssgsag
 
-import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.widget.DrawerLayout
 import android.view.View
 import android.widget.RelativeLayout
 import com.example.dohee.ssgsag.Adapter.MyFragmentStatePagerAdapter
