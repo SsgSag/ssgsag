@@ -13,10 +13,14 @@ import retrofit2.http.*
 
 interface NetworkService{
     //회원가입
+    @Multipart
     @POST("/users")
     fun postSignUpResponse(
-        @Header("Content-Type") content_type : String, //매개변수들
-        @Body() body : JsonObject
+        @Part("userEmail") userEmail : RequestBody,
+        @Part("userPw") userPw : RequestBody,
+        @Part("userName") userName : RequestBody,
+        @Part("userUniv") userUniv : RequestBody,
+        @Part("userMajor") userMajor : RequestBody
     ) : Call<PostSignUpResponse> //return type
 
     //로그인
